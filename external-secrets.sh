@@ -103,6 +103,7 @@ kubectl apply -f external-secrets.yaml
 
 
 echo "11: Check changes"
-#kubectl describe externalsecret external-secrets
+#kubectl describe externalsecrets external-secrets
+#kubectl describe externalsecrets
 #kubectl get secret external-secrets -o jsonpath='{.data}'
 
