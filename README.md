@@ -1,5 +1,5 @@
 # external-secret-script
-git --version
-git 
-cd external-secret-script
-bash external-secrets.sh
+git --version <br />
+git <br />
+cd external-secret-script <br />
+bash external-secrets.sh <br />
