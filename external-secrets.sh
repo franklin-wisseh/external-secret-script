@@ -53,16 +53,16 @@ spec:
     aws:
       service: SecretsManager
       region: us-east-1
-    auth:
-      secretRef:
-        accessKeyIDSecretRef:
-          name: awssm-secret
-          key: access-key
-          namespace: default
-        secretAccessKeySecretRef:
-          name: awssm-secret
-          key: secret-access-key
-          namespace: default
+      auth:
+        secretRef:
+          accessKeyIDSecretRef:
+            name: awssm-secret
+            key: access-key
+            namespace: default
+          secretAccessKeySecretRef:
+            name: awssm-secret
+            key: secret-access-key
+            namespace: default
 EOF
 #cat cluster-secret-store.yaml
 
