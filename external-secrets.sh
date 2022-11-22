@@ -99,7 +99,8 @@ EOF
 
 echo "10: Apply files to cluster"
 kubectl apply -f cluster-secret-store.yaml 
-kubectl apply -f external-secrets.yaml
+kubectl apply --namespace=ar -f external-secrets.yaml
+kubectl apply --namespace=core -f external-secrets.yaml
 
 
 echo "11: Check changes"
