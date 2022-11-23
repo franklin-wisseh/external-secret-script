@@ -98,6 +98,7 @@ EOF
 
 
 echo "10: Apply files to cluster"
+sleep 20
 kubectl apply -f cluster-secret-store.yaml 
 kubectl apply --namespace=ar -f external-secrets.yaml
 kubectl apply --namespace=core -f external-secrets.yaml
