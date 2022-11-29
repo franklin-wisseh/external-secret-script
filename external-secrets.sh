@@ -98,7 +98,7 @@ EOF
 
 
 echo "10: Apply files to cluster"
-sleep 20
+sleep 30
 kubectl apply -f cluster-secret-store.yaml 
 kubectl apply --namespace=ar -f external-secrets.yaml
 kubectl apply --namespace=core -f external-secrets.yaml
@@ -107,5 +107,6 @@ kubectl apply --namespace=core -f external-secrets.yaml
 echo "11: Check changes"
 #kubectl describe externalsecrets external-secrets
 #kubectl describe externalsecrets
-#kubectl get secret external-secrets -o jsonpath='{.data}'
+kubectl get secret external-secrets -o jsonpath='{.data}' -n ar
+kubectl get secret external-secrets -o jsonpath='{.data}' -n core
 
