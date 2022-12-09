@@ -102,7 +102,8 @@ sleep 30
 kubectl apply -f cluster-secret-store.yaml 
 kubectl apply --namespace=ar -f external-secrets.yaml
 kubectl apply --namespace=core -f external-secrets.yaml
-
+#For impl & prod
+kubectl apply --namespace=next -f external-secrets.yaml
 
 echo "11: Check changes"
 #kubectl describe externalsecrets external-secrets
@@ -110,4 +111,5 @@ echo "11: Check changes"
 sleep 110
 kubectl get secret external-secrets -o jsonpath='{.data}' -n ar
 kubectl get secret external-secrets -o jsonpath='{.data}' -n core
-
+#For impl & prod
+kubectl get secret external-secrets -o jsonpath='{.data}' -n next
